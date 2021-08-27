@@ -1,9 +1,14 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+/* POST criacao de compra. */
+router.post('/', function (req, res, next) {
+    res.send('Rodando...');
+});
+
+/* GET criacao de compra. */
+router.get('/:compra_id/status', function (req, res, next) {
+    res.send('Rodando status...');
 });
 
 module.exports = router;
