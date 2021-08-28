@@ -30,6 +30,20 @@ class Cielo {
 
     }
 
+    static consulta(PaymentId) {
+
+        return fetch('https://apiquerysandbox.cieloecommerce.cielo.com.br/1/sales/' + PaymentId, {
+            method: 'get',
+            headers: {
+                'Content-Type': 'application/json',
+                'MerchantId': '8c8f7ddd-234d-4ba0-aa8e-6f20a94ac785',
+                'MerchantKey': 'KIKDGXVXXSSFNTWXLHWHPHMWSCTGCIXNUARLMOMU',
+            },
+        })
+            .then(res => res.json());
+
+    }
+
 }
 
 module.exports = Cielo;
